@@ -4,6 +4,7 @@ import ru.geekbrains.domain.HttpRequest;
 import ru.geekbrains.domain.HttpResponse;
 
 import java.io.IOException;
+import java.net.http.HttpRequest;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,8 +16,6 @@ public class RequestHandler implements Runnable {
 
     private final SocketService socketService;
     private final RequestParser requestParser;
-
-    ResponseParcer responseParcer;
 
     public RequestHandler(SocketService socketService, RequestParser requestParser) {
         this.socketService = socketService;
